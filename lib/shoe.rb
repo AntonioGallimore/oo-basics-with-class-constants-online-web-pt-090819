@@ -4,10 +4,11 @@ class Shoe
   
   BRANDS = ["Uggs", "Rainbow"]
   
-   def brand=(brand)
+     def initialize(brand)
     @brand = brand
-    BRANDS << brand
+    BRANDS << brand unless BRANDS.include?(brand)
   end
+
   def initialize(brand)
     @brand = brand
   end
